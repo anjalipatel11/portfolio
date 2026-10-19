@@ -1,0 +1,673 @@
+/* ==================================================
+   RESUME PAGE
+   ================================================== */
+
+.resume-page {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 70px 5vw 100px;
+}
+
+
+/* ==================================================
+   RESUME HEADER
+   ================================================== */
+
+.resume-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 80px;
+}
+
+
+.resume-header h1 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(3.5rem, 6vw, 5rem);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.04em;
+
+    margin: 0;
+}
+
+
+/* Download button */
+
+.resume-download {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    border: 1.5px solid rgba(37, 40, 43, 0.35);
+
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.resume-download:hover {
+    background: var(--blue-dark);
+
+    color: var(--cream-light);
+
+    border-color: var(--blue-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   RESUME SECTIONS
+   ================================================== */
+
+.resume-section {
+    margin-bottom: 65px;
+}
+
+
+.resume-section-heading {
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    margin-bottom: 35px;
+}
+
+
+.resume-section-heading h2 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -0.03em;
+
+    margin: 0;
+}
+
+
+/* ==================================================
+   RESUME ENTRIES
+   ================================================== */
+
+.resume-entry {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    gap: 40px;
+
+    align-items: start;
+
+    padding: 0 0 40px;
+}
+
+
+.resume-entry-main h3 {
+    font-size: 1.25rem;
+
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    margin: 0 0 6px;
+
+    color: var(--blue-dark);
+
+    transition: color 0.25s ease;
+}
+
+
+.resume-entry-subtitle {
+    color: var(--text);
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+.resume-gpa {
+    margin-top: 14px;
+
+    font-size: 0.9rem;
+
+    color: var(--text);
+}
+
+
+.resume-entry-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    font-size: 0.72rem;
+
+    line-height: 1.3;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+}
+
+.resume-entry-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(142, 169, 193, 0.16);
+
+    border: 1px solid rgba(80, 103, 123, 0.22);
+
+    color: var(--blue-dark);
+
+    letter-spacing: 0.04em;
+
+    box-shadow:
+        0 2px 8px rgba(50, 70, 85, 0.06);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.resume-entry-meta span:hover {
+    background: rgba(142, 169, 193, 0.25);
+
+    border-color: rgba(80, 103, 123, 0.35);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   COURSES LINK
+   ================================================== */
+
+.courses-link {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 18px 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    color: var(--text);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.courses-link:hover {
+    background: rgba(142, 169, 193, 0.12);
+
+    border-color: var(--blue);
+
+    transform: translateY(-2px);
+}
+
+
+.courses-arrow {
+    font-size: 1.2rem;
+
+    transition: transform 0.3s ease;
+}
+
+
+.courses-link:hover .courses-arrow {
+    transform: translateX(6px);
+}
+
+
+
+
+
+/* ==================================================
+   EXPERIENCE DESCRIPTIONS
+   ================================================== */
+
+.resume-description {
+    margin-top: 22px;
+
+    padding-left: 20px;
+
+    max-width: none;
+
+    color: var(--text-light);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+.resume-description li {
+    margin-bottom: 10px;
+
+    padding-left: 5px;
+}
+
+
+.resume-description li:last-child {
+    margin-bottom: 0;
+}
+
+.resume-description li::marker {
+    color: var(--blue-dark);
+}
+
+
+/* Space between individual experience entries */
+
+.experience-entry {
+    padding-bottom: 55px;
+}
+
+
+.experience-entry:last-child {
+    padding-bottom: 0;
+}
+
+
+
+
+/* ==================================================
+   SKILLS
+   ================================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 70px;
+
+    row-gap: 55px;
+}
+
+
+.skill-category h3 {
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    color: var(--blue-dark);
+
+    margin-bottom: 18px;
+}
+
+
+.skill-pills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+
+.skill-pills span {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(80, 103, 123, 0.35);
+
+    border-radius: 999px;
+
+    background: rgba(142, 169, 193, 0.22);
+
+    color: var(--blue-dark);
+
+    font-size: 0.82rem;
+
+    line-height: 1.2;
+
+    white-space: normal;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.skill-pills span:hover {
+    background: rgba(142, 169, 193, 0.38);
+
+    color: var(--blue-dark);
+
+    border-color: rgba(80, 103, 123, 0.5);
+
+    transform: translateY(-2px);
+}
+
+.skills-section {
+    padding-top: 20px;
+}
+
+
+
+
+/* ==================================================
+   LEADERSHIP & INVOLVEMENT
+   ================================================== */
+
+.leadership-entry {
+    padding-bottom: 55px;
+}
+
+
+.leadership-entry:last-child {
+    padding-bottom: 0;
+}
+
+
+.involvement-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 24px;
+
+    color: var(--blue-dark);
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    border-bottom: 1px solid rgba(80, 103, 123, 0.35);
+
+    padding-bottom: 3px;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.involvement-link:hover {
+    color: var(--text);
+
+    border-color: var(--text);
+}
+
+
+.involvement-link .arrow {
+    transition: transform 0.25s ease;
+}
+
+
+.involvement-link:hover .arrow {
+    transform: translate(3px, -3px);
+}
+
+.leadership-section {
+    padding-top: 20px;
+    margin-bottom: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================================
+   COURSES PAGE
+   ================================================== */
+
+.courses-page {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 80px 5vw 100px;
+}
+
+
+/* ==================================================
+   COURSES INTRO
+   ================================================== */
+
+.courses-intro {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 60px;
+
+    margin-bottom: 80px;
+}
+
+
+.courses-eyebrow {
+    color: var(--blue-dark);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 12px;
+}
+
+
+.courses-intro h1 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: clamp(3.5rem, 6vw, 5rem);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.04em;
+
+    margin: 0;
+}
+
+
+.courses-intro-text {
+    max-width: 400px;
+
+    color: var(--text-light);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   COURSE CATEGORIES
+   ================================================== */
+
+.courses-section {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 80px;
+
+    margin-bottom: 90px;
+}
+
+
+.course-category h2,
+.additional-courses h2 {
+    font-family: "Instrument Serif", serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.course-category h2 {
+    color: var(--blue-dark);
+}
+
+
+.course-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+.course-list li {
+    display: grid;
+
+    grid-template-columns: 75px minmax(0, 1fr);
+
+    column-gap: 8px;
+
+    align-items: start;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid rgba(37, 40, 43, 0.15);
+
+    color: var(--text);
+
+    font-size: 0.95rem;
+}
+
+
+.course-list li:first-child {
+    border-top: 1px solid rgba(37, 40, 43, 0.15);
+}
+
+.course-code {
+    color: var(--blue-dark);
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+/* ==================================================
+   ADDITIONAL COURSES
+   ================================================== */
+
+.additional-courses {
+    padding-top: 50px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+
+/* ==================================================
+   BACK TO RESUME
+   ================================================== */
+
+.courses-back {
+    margin-top: 70px;
+}
+
+
+.courses-back a {
+    color: var(--blue-dark);
+
+    font-size: 0.9rem;
+
+    border-bottom: 1px solid rgba(80, 103, 123, 0.35);
+
+    padding-bottom: 4px;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.courses-back a:hover {
+    color: var(--text);
+
+    border-color: var(--text);
+}

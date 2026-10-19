@@ -1,0 +1,960 @@
+/* ==================================================
+   CAMPUS COMMUTER PAGE
+   ================================================== */
+
+/* HERO IMAGES */
+.campus-logo-pair {
+    position: relative;
+    width: 420px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campus-logo-pair img {
+    display: block;
+    object-fit: contain;
+}
+
+/* UMD logo */
+.campus-logo-pair img:first-child {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 60%;
+    transform: translateX(-50%);
+}
+
+/* Shuttle-UM logo */
+.campus-logo-pair img:last-child {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 200px;
+    left: 60%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+/* ==================================================
+   PROJECT OVERVIEW — CAMPUS COMMUTER
+   ================================================== */
+
+.campus-overview-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+    gap: 100px;
+    align-items: start;
+}
+
+
+/* Overview text */
+
+.campus-overview-content {
+    max-width: 650px;
+}
+
+.campus-overview-content p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.campus-overview-content p:last-child {
+    margin-bottom: 0;
+}
+
+.campus-overview-content strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+
+/* Project approach */
+
+.campus-overview-aside {
+    padding-left: 35px;
+    border-left: 1px solid var(--border);
+}
+
+.campus-overview-label {
+    margin-bottom: 25px;
+    color: var(--blue-dark);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.campus-overview-steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.campus-overview-step {
+    display: grid;
+    grid-template-columns: 35px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.campus-overview-step:first-child {
+    padding-top: 0;
+}
+
+.campus-overview-step:last-child {
+    border-bottom: none;
+}
+
+.campus-overview-step span {
+    color: var(--blue-dark);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.campus-overview-step p {
+    margin: 0;
+
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.campus-overview-step:hover {
+    color: var(--blue-dark);
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   CAMPUS COMMUTER — PROBLEM & SOLUTION
+========================================= */
+
+.campus-problem-solution {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 60px 10px;
+}
+
+.campus-problem-solution .campus-section-heading {
+    margin-bottom: 55px;
+}
+
+.campus-problem-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* TEXT */
+
+.campus-problem-text {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.campus-problem-block,
+.campus-solution-block {
+    position: relative;
+}
+
+.campus-problem-block h3,
+.campus-solution-block h3 {
+    margin: 0 0 18px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1f4f7a;
+}
+
+.campus-problem-block p,
+.campus-solution-block p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.campus-solution-block p + p {
+    margin-top: 18px;
+}
+
+/* IMAGE */
+
+.campus-problem-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campus-problem-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campus-problem-image:hover img {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+
+
+
+
+
+
+
+/* ==================================================
+    CAMPUS COMMUTER — RESEARCH SYNTHESIS
+    ================================================== */
+
+.campus-research-section {
+    margin-top: 120px;
+    margin-bottom: 140px;
+}
+
+
+/* Research blocks */
+
+.research-block {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 90px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.research-block:last-child {
+    margin-bottom: 0;
+}
+
+.research-block-reverse {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+
+/* Text */
+
+.research-text {
+    max-width: 500px;
+}
+
+.research-label {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    color: var(--blue-dark);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.research-text h3 {
+    margin: 0 0 22px;
+
+    color: var(--text);
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.research-text p {
+    margin: 0 0 20px;
+
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.research-text p:last-child {
+    margin-bottom: 0;
+}
+
+.research-text strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.research-text em {
+    color: var(--text);
+}
+
+.research-text ul {
+    margin: 5px 0 22px;
+    padding-left: 20px;
+
+    color: var(--text-light);
+}
+
+.research-text li {
+    margin-bottom: 7px;
+    padding-left: 4px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* Research images */
+
+.research-image {
+    width: 90%;
+    overflow: hidden;
+
+    border-radius: 12px;
+    background: var(--cream-light);
+}
+
+.research-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.research-image:hover img {
+    transform: scale(1.015);
+}
+
+.research-image-large {
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+
+.research-image-open-coding {
+    width: 100%;
+}
+
+
+
+
+
+
+/* Two-image brainstorming layout */
+
+.research-image-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.research-image-pair img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.research-image-pair img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Extra spacing for the final analysis */
+
+.research-block-axial {
+    align-items: start;
+}
+
+.research-block-axial .research-text {
+    padding-top: 5px;
+}
+
+/* Research Synthesis subsection labels */
+.campus-research-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #006699;
+    margin-bottom: 14px;
+}
+
+/* ===========================
+   QUALITATIVE DATA ANALYSIS
+   ========================== */
+
+.qualitative-analysis {
+    margin-top: 7rem;
+}
+
+
+/* SECTION INTRO */
+
+.qualitative-analysis > .research-text {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 4rem;
+}
+
+.qualitative-analysis .qualitative-intro {
+    max-width: 100%;
+}
+
+
+/* CODING SUBSECTIONS */
+
+.coding-subsection {
+    margin-top: 4rem;
+}
+
+.coding-subsection + .coding-subsection {
+    margin-top: 5rem;
+}
+
+
+/* SUBSECTION HEADER */
+
+.coding-subsection-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.coding-step {
+    font-family: "Google Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.coding-subsection-header .campus-research-label {
+    margin: 0;
+}
+
+
+/* KEEP EXISTING RESEARCH BLOCK LAYOUT */
+
+.coding-subsection .research-block {
+    margin-top: 0;
+}
+
+
+/* AXIAL CODING SEPARATION */
+
+.coding-axial {
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================================
+   UNDERSTANDING THE USERS
+   ================================================== */
+
+.users-intro {
+    width: 100%;
+    margin-bottom: 65px;
+}
+
+.users-intro p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+
+
+
+/* --------------------------------------------------
+   PERSONA CAROUSEL
+   -------------------------------------------------- */
+
+.persona-carousel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+/* Persona track */
+
+.persona-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* Persona cards */
+
+.persona-card {
+    display: none;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 32px;
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.5),
+            rgba(142, 169, 193, 0.08)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(50, 70, 85, 0.05);
+}
+
+
+/* Only the active persona is visible */
+
+.persona-card.active {
+    display: block;
+
+    animation: personaFade 0.35s ease;
+}
+
+
+@keyframes personaFade {
+
+    from {
+        opacity: 0;
+        transform: translateX(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* --------------------------------------------------
+   CAROUSEL ARROWS
+   -------------------------------------------------- */
+
+.persona-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--cream-light);
+    color: var(--text);
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.persona-arrow:hover {
+    background: var(--blue-dark);
+    color: var(--cream-light);
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+
+.persona-prev {
+    left: -60px;
+}
+
+
+.persona-next {
+    right: -60px;
+}
+
+
+/* --------------------------------------------------
+   PERSONA HEADER
+   -------------------------------------------------- */
+
+.persona-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.persona-photo {
+    width: 64px;
+    height: 64px;
+    grid-row: 1 / span 2;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.persona-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.persona-header h3 {
+    margin: 0 0 4px;
+    font-family: "Instrument Serif", serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.persona-header span {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+
+
+/* Persona details */
+
+.persona-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.persona-details > div > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue-dark);
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.persona-details > div > p {
+    margin: 0;
+
+    color: var(--text);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+
+
+
+
+
+
+/* App review */
+
+.persona-review {
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.persona-review p {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+
+
+
+
+
+
+
+
+
+.persona-review {
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.persona-review p {
+    font-style: italic;
+}
+
+
+
+
+/* ==================================================
+   USER FLOW
+   ================================================== */
+
+.user-flow-section {
+    margin-top: 110px;
+}
+
+.user-flow-section span{
+    margin: 0 0 18px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1f4f7a;
+}
+
+.user-flow-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.user-flow-layout .case-study-image {
+    margin: 0;
+}
+
+.user-flow-layout .case-study-image img {
+    display: block;
+    width: 80%;
+    height: auto;
+
+    border-radius: 20px;
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 14px 40px rgba(50, 70, 85, 0.08);
+}
+
+.user-flow-text {
+    width: 100%;
+}
+
+.user-flow-text p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.user-flow-text p + p {
+    margin-top: 20px;
+}
+
+
+
+
+
+/* ==================================================
+   WIREFRAMES
+   ================================================== */
+
+.campus-wireframes-section {
+    width: 100%;
+}
+
+
+/* --------------------------------------------------
+   WIREFRAME STAGE
+   -------------------------------------------------- */
+
+.wireframe-stage {
+    margin-top: 75px;
+}
+
+.digital-wireframe-stage {
+    margin-top: 120px;
+}
+
+
+/* --------------------------------------------------
+   WIREFRAME STAGE HEADER
+   -------------------------------------------------- */
+
+.wireframe-stage-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.wireframe-stage-header h3 {
+    margin-top: 10px;
+    font-family: "Instrument Serif", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--blue-dark);
+}
+
+.wireframe-stage-header p {
+    max-width: 500px;
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* --------------------------------------------------
+   WIREFRAME GALLERY
+   -------------------------------------------------- */
+
+.wireframe-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.wireframe-image {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 25px rgba(50, 70, 85, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.wireframe-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(50, 70, 85, 0.08);
+}
+
+.wireframe-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+/* ==================================================
+   CAMPUS COMMUTER REFLECTION 
+   ================================================== */
+
+.campus-reflection-section {
+
+    margin-bottom: 5px;
+}
+
+
+.campus-reflection-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.campus-reflection-item {
+    width: 100%;
+}
+
+.campus-reflection-item p {
+    color: var(--blue-dark);
+}
+
+.next-steps {
+    margin-top: 45px;
+    padding: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.45),
+            rgba(142, 169, 193, 0.08)
+        );
+
+}
+
+.next-steps span {
+    margin-bottom: 12px;
+
+    font-family: "Instrument Serif", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.next-steps p {
+    margin: 0;
+    font-size: 0.95rem;
+}

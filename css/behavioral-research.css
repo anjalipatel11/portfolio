@@ -1,0 +1,685 @@
+/* ==================================================
+   GLOBAL SETTINGS
+   ================================================== */
+
+:root {
+    --cream: #f4f1ea;
+    --cream-light: #faf9f5;
+
+    --blue: #8ea9c1;
+    --blue-dark: #50677b;
+
+    --text: #25282b;
+    --text-light: #656b70;
+
+    --border: rgba(37, 40, 43, 0.25);
+
+    --max-width: 1200px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--cream);
+    color: var(--text);
+
+    font-family: "Google Sans", sans-serif;
+
+    line-height: 1.5;
+
+    padding-top: 97px;
+}
+
+
+
+
+
+
+
+
+/* Hero Image */
+.behavioral-hero-image img {
+    width: 100%;
+
+    max-width: 620px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 25px 35px rgba(50, 70, 85, 0.15)
+    );
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+
+    transform: translateX(40px);
+}
+
+
+
+/* --------------------------------------------------
+   BEHAVIORAL RESEARCH — OVERVIEW
+   -------------------------------------------------- */
+
+.behavioral-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    gap: 100px;
+    align-items: start;
+}
+
+.behavioral-overview-main {
+    max-width: 650px;
+}
+
+.behavioral-overview-side {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.behavioral-overview-label {
+    margin-bottom: 12px;
+    color: var(--blue-dark);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.behavioral-overview-text {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.behavioral-overview-main .behavioral-overview-text + .behavioral-overview-text {
+    margin-top: 28px;
+}
+
+.behavioral-overview-card {
+    padding-left: 35px;
+    border-left: 1px solid var(--border);
+}
+
+.behavioral-overview-card + .behavioral-overview-card {
+    margin-top: 5px;
+}
+
+
+
+
+/* =========================================
+   BEHAVIORAL RESEARCH — STUDY DESIGN
+   ========================================= */
+
+.behavioral-study-design {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    gap: 100px;
+    align-items: start;
+}
+
+
+/* VARIABLE STACK */
+
+.behavioral-variable-stack {
+    max-width: 600px;
+}
+
+.behavioral-variable {
+    overflow: hidden;
+    padding: 0 24px 18px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 18px rgba(50, 70, 85, 0.05);
+    text-align: center;
+}
+
+.behavioral-variable-label {
+    margin: 0 -24px 15px;
+    padding: 8px 16px;
+    background: rgba(142, 169, 193, 0.22);
+    border-bottom: 1px solid rgba(80, 103, 123, 0.18);
+    color: var(--blue-dark);
+    font-size: 0.62rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    text-align: center;
+}
+
+.behavioral-variable h3 {
+    margin-bottom: 11px;
+    font-family: "Instrument Serif", serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+.behavioral-variable-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.behavioral-variable-options span,
+.behavioral-variable-result {
+    padding: 5px 11px;
+    border: 1px solid rgba(80, 103, 123, 0.22);
+    border-radius: 999px;
+    background: rgba(142, 169, 193, 0.12);
+    color: var(--blue-dark);
+    font-size: 0.7rem;
+}
+
+.behavioral-variable-result {
+    display: inline-block;
+}
+
+
+/* Connectors */
+.behavioral-variable-connector {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-dark);
+    font-size: 1rem;
+}
+
+
+/* RIGHT SIDE */
+
+.behavioral-study-content {
+    padding-top: 5px;
+}
+
+.behavioral-study-description {
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--border);
+}
+
+.behavioral-study-description p:last-child {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.behavioral-skills {
+    padding-top: 35px;
+}
+
+.behavioral-skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.behavioral-skill-list span {
+    padding: 9px 14px;
+    border: 1px solid rgba(80, 103, 123, 0.22);
+    border-radius: 999px;
+    background: rgba(142, 169, 193, 0.18);
+    color: var(--blue-dark);
+    font-size: 0.78rem;
+    box-shadow: 0 4px 10px rgba(50, 70, 85, 0.08);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+.behavioral-skill-list span:hover {
+    transform: translateY(-2px);
+    background: rgba(142, 169, 193, 0.28);
+    box-shadow: 0 7px 14px rgba(50, 70, 85, 0.12);
+}
+
+
+
+
+/* ========================================
+   RESEARCH PROCESS
+   ======================================== */
+
+.behavioral-process {
+    width: 100%;
+    padding: 25px 0;
+}
+
+.behavioral-process-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.behavioral-process-step {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.behavioral-process-number {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(80, 103, 123, 0.3);
+    border-radius: 50%;
+    background: rgba(142, 169, 193, 0.18);
+    color: var(--blue-dark);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    box-shadow: 0 5px 12px rgba(50, 70, 85, 0.08);
+}
+
+.behavioral-process-step p {
+    max-width: 105px;
+    margin: 0 auto;
+    color: var(--text);
+    font-size: 0.78rem;
+    line-height: 1.4;
+}
+
+.behavioral-process-arrow {
+    flex-shrink: 0;
+    margin-top: 12px;
+    color: var(--blue-dark);
+    font-size: 1.2rem;
+    opacity: 0.65;
+}
+
+
+
+
+
+/* ========================================
+   DATA COLLECTION
+   ======================================== */
+/* ========================================
+   DATA COLLECTION — CENTERED HEADER
+   ======================================== */
+
+.behavioral-data-section .project-section-header {
+    justify-content: center;
+}
+
+.behavioral-data-section .project-section-header::after {
+    margin-left: 18px;
+}
+
+.behavioral-data-section .project-section-header::before {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--border);
+    margin-right: 3px;
+}
+
+
+
+
+.behavioral-data-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   DATA COLLECTION — TOP CARDS
+   ======================================== */
+
+.behavioral-data-card {
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(50, 70, 85, 0.05);
+}
+
+.behavioral-data-card-header {
+    padding: 14px 24px;
+    background: rgba(142, 169, 193, 0.12);
+    border-bottom: 1px solid var(--border);
+}
+
+.behavioral-data-card-header .behavioral-data-label {
+    margin-bottom: 0;
+}
+
+.behavioral-data-card-content {
+    padding: 22px 24px 24px;
+}
+
+.behavioral-data-card-content h3 {
+    margin-bottom: 10px;
+    color: var(--blue-dark);
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.65rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.behavioral-data-card-content p {
+    max-width: 520px;
+    color: var(--text-light);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.behavioral-measures {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.behavioral-measures-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 17px 28px;
+    background: rgba(142, 169, 193, 0.12);
+    border-bottom: 1px solid var(--border);
+}
+
+.behavioral-measures-header .behavioral-data-label {
+    margin-bottom: 0;
+    /*font-size: 0.65rem;*/
+}
+
+.behavioral-measures-intro {
+    max-width: 500px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.behavioral-measure-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 25px;
+    padding: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.behavioral-measure-row:last-child {
+    border-bottom: none;
+}
+
+.behavioral-measure-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(80, 103, 123, 0.25);
+    border-radius: 50%;
+    background: rgba(142, 169, 193, 0.18);
+    color: var(--blue-dark);
+    box-shadow: 0 4px 10px rgba(50, 70, 85, 0.07);
+}
+
+.behavioral-measure-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.7;
+}
+
+.behavioral-measure-content h3 {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-family: "Google Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.behavioral-measure-content p,
+.behavioral-measure-content li {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.behavioral-measure-content ul {
+    margin: 8px 0;
+    padding-left: 18px;
+}
+
+
+
+
+
+/* =========================
+   Data Analysis
+   ========================= */
+
+.behavioral-analysis {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.behavioral-analysis-visual {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(50, 70, 85, 0.05);
+}
+
+.behavioral-analysis-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.behavioral-analysis-description {
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.behavioral-analysis-description .behavioral-overview-label {
+    margin-bottom: 15px;
+}
+
+.behavioral-analysis-description p:last-child {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+
+
+/* =========================
+   Key Findings
+   ========================= */
+
+.behavioral-findings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 55px;
+}
+
+.behavioral-finding {
+    padding: 28px 30px 30px;
+    border-top: 2px solid var(--blue);
+    border-bottom: 1px solid var(--border);
+    background: rgba(142, 169, 193, 0.05);
+}
+
+.behavioral-finding-number {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(80, 103, 123, 0.3);
+    border-radius: 50%;
+    background: rgba(142, 169, 193, 0.2);
+    color: var(--blue-dark);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.behavioral-finding h3 {
+    margin-bottom: 14px;
+    font-family: "Instrument Serif", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.behavioral-finding > p:last-child {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+.behavioral-findings-conclusion {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 35px;
+    border: 1px solid rgba(80, 103, 123, 0.22);
+    border-radius: 16px;
+    background: rgba(142, 169, 193, 0.12);
+    text-align: center;
+}
+
+.behavioral-findings-conclusion .behavioral-overview-label {
+    margin-bottom: 12px;
+    color: var(--blue-dark);
+}
+
+.behavioral-findings-conclusion > p:last-child {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+
+
+
+/* =========================
+   Reflection
+   ========================= */
+
+.reflection-section {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}   
+
+
+.behavioral-reflection {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+    gap: 100px;
+    align-items: start;
+}
+
+.behavioral-reflection-main {
+    max-width: 700px;
+}
+
+.behavioral-reflection-main p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.behavioral-reflection-main p + p {
+    margin-top: 28px;
+}
+
+.behavioral-reflection-side {
+    padding-left: 35px;
+    border-left: 1px solid var(--border);
+}
+
+.behavioral-reflection-side .behavioral-overview-label {
+    margin-bottom: 18px;
+    color: var(--blue-dark);
+}
+
+.behavioral-reflection-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.behavioral-reflection-skills span {
+    padding: 8px 12px;
+    border: 1px solid rgba(80, 103, 123, 0.22);
+    border-radius: 999px;
+    background: rgba(142, 169, 193, 0.14);
+    color: var(--blue-dark);
+    font-size: 0.75rem;
+}
+
+.behavioral-paper-link {
+    margin-top: 55px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.behavioral-paper-link a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.25s ease;
+}
+
+.behavioral-paper-link a:hover {
+    color: var(--text);
+}
+
+.behavioral-paper-link a span:last-child {
+    font-size: 1.1rem;
+}
