@@ -409,3 +409,101 @@
 
     transform: translateY(-2px);
 }
+
+
+
+
+
+
+
+
+
+/* ==================================================
+   RESPONSIVE — HOME PAGE
+   ================================================== */
+
+/* ---------- Tablet & mobile (768px and below) ---------- */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero {
+        height: auto;             /* was fixed, which could clip content */
+        min-height: 500px;        /* fixed minimum so tablets don't get an overly tall hero */
+    }
+
+    .hero-content {
+        margin: 20px;
+        padding: 30px;
+        border-radius: 18px;
+    }
+
+    /* Projects section */
+    .projects-section {
+        padding-top: 100px;
+    }
+
+    .section-intro {
+        margin-bottom: 60px;
+    }
+
+    .scroll-arrow {
+        margin-bottom: 5rem;      /* was 9rem, too much empty space on phones */
+    }
+
+    /* Project grid: one column, cards stack */
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 70px;
+    }
+
+    .project-info {
+        min-height: 0;            /* the 175px minimum only helps in 2 columns */
+    }
+
+    /* Page navigation: stays inside the page padding */
+    .page-navigation {
+        width: 100%;
+        margin-left: 0;
+        gap: 10px;
+        margin-top: 80px;
+        padding: 18px 5vw;
+    }
+}
+
+
+/* ---------- Small mobile (500px and below) ---------- */
+@media (max-width: 500px) {
+
+    .hero {
+        min-height: 70svh;
+    }
+
+    .hero-content {
+        padding: 24px;
+    }
+
+    .hero-name {
+        margin-left: 0;           /* the 8% indent wastes space on narrow screens */
+    }
+
+    .scroll-arrow {
+        margin-bottom: 3rem;
+    }
+
+    .project-info h3 {
+        font-size: 2rem;
+    }
+
+    .page-navigation {
+        gap: 6px;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .page-nav-button {
+        min-width: 0;
+        flex: 1;
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+}

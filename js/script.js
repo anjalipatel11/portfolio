@@ -312,4 +312,6 @@ if (progressItems.length && progressSections.length) {
 
 
 
-lucide.createIcons();
+if(window.lucide) {
+    lucide.createIcons();
+}

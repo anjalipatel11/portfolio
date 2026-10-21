@@ -1118,3 +1118,750 @@
     font-size: 1.8rem;
     line-height: 1.3;
 }
+
+
+
+
+
+
+
+/* ==================================================
+   RESPONSIVE — STRAY CAT BLUES PAGE
+   ================================================== */
+
+/* ---------- Tablet & mobile (768px and below) ---------- */
+@media (max-width: 768px) {
+
+    /* ===== Hero image ===== */
+
+    .scb-hero-image {
+        display: flex;
+        justify-content: center;
+        min-width: 0;             /* lets the grid column shrink instead of stretching to the image's full size */
+    }
+
+    .scb-hero-image img {
+        display: block;
+        max-width: min(100%, 460px);
+        height: auto;
+    }
+
+
+    /* ===== 01 Project Overview ===== */
+
+    .scb-overview-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 45px;
+    }
+
+    .scb-overview-intro {
+        padding-top: 0;           /* desktop 30px isn't needed once stacked */
+    }
+
+    .scb-overview-intro p {
+        font-size: 1.15rem;
+    }
+
+    .scb-overview-client {
+        padding-left: 0;
+        padding-top: 35px;
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+
+    .scb-overview-client h3 {
+        font-size: 2.7rem;
+    }
+
+
+    /* ===== 02 Project Challenge ===== */
+
+    .scb-challenge-card {
+        padding: 40px 35px;
+        border-radius: 20px;
+    }
+
+    .scb-challenge-card h3 {
+        margin-bottom: 35px;
+        font-size: clamp(1.4rem, 4.5vw, 2rem);   /* never bigger than desktop's 2rem */
+    }
+
+    .scb-challenge-details {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+
+    /* ===== 03 Approach ===== */
+
+    .scb-approach-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .scb-approach-card {
+        min-height: 200px;
+        padding: 22px;
+    }
+
+    .scb-approach-card:last-child {
+        grid-column: 1 / -1;      /* fifth card spans the row instead of sitting alone */
+    }
+
+    .scb-approach-icon {
+        margin-bottom: 22px;
+    }
+
+    .scb-approach-summary {
+        font-size: 1.6rem;
+    }
+
+
+    /* ===== 04 Project Timeline ===== */
+
+    .scb-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .scb-timeline-step,
+    .scb-timeline-step:first-child {
+        min-height: 125px;
+        padding: 22px 28px;
+        clip-path: polygon(
+            0 0,
+            calc(100% - 16px) 0,
+            100% 50%,
+            calc(100% - 16px) 100%,
+            0 100%,
+            16px 50%
+        );
+    }
+
+    .scb-timeline-step:first-child {
+        clip-path: polygon(
+            0 0,
+            calc(100% - 16px) 0,
+            100% 50%,
+            calc(100% - 16px) 100%,
+            0 100%
+        );
+    }
+
+    .scb-timeline-label {
+        font-size: 0.85rem;
+    }
+
+    .scb-timeline-step:hover {
+        transform: none;
+        filter: none;
+    }
+
+
+    /* ===== 05 Sales Data Analysis ===== */
+
+    .scb-sales-intro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    .scb-sales-heading {
+        position: static;         /* desktop is sticky, which overlaps content when stacked */
+    }
+
+    .scb-sales-heading h3 {
+        max-width: 600px;
+    }
+
+    .scb-sales-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .scb-sales-figure {
+        padding: 12px;
+    }
+
+
+    /* ===== 06 Email Newsletter ===== */
+
+    .scb-email-intro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        margin-bottom: 35px;
+    }
+
+    .scb-email-heading h3 {
+        max-width: 600px;
+    }
+
+    .scb-email-comparison {
+        gap: 20px;
+    }
+
+    .scb-email-version {
+        padding: 18px;
+    }
+
+
+    /* ===== 07 In-Person Table Design ===== */
+
+    .scb-table-intro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        margin-bottom: 35px;
+    }
+
+    .scb-table-layout {
+        grid-template-columns: minmax(0, 1fr);   /* now stacks at 768px, not just 500px */
+        gap: 28px;
+        padding: 24px;
+    }
+
+    .scb-table-layout-image {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .scb-table-layout-content h3 {
+        font-size: clamp(2.3rem, 6vw, 3rem);
+    }
+
+
+    /* ===== 08 Checkout Process Review ===== */
+
+    .scb-checkout-intro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        margin-bottom: 35px;
+    }
+
+    .scb-checkout-heading h3 {
+        max-width: 600px;
+    }
+
+    .scb-checkout-description {
+        padding-top: 0;
+    }
+
+    .scb-checkout-review {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        margin-bottom: 40px;
+    }
+
+    .scb-checkout-image {
+        max-width: 650px;
+    }
+
+    .scb-checkout-improvement-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .scb-checkout-improvement {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .scb-improvement-number {
+        margin-bottom: 12px;
+    }
+
+
+    /* ===== 09 Google Ads Guide ===== */
+
+    .scb-ads-intro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        margin-bottom: 35px;
+    }
+
+    .scb-ads-heading h3 {
+        max-width: 600px;
+    }
+
+    .scb-ads-description {
+        padding-top: 0;
+    }
+
+    .scb-ads-grant {
+        margin-bottom: 42px;
+        padding: 30px;
+    }
+
+    .scb-ads-steps-grid {
+        gap: 9px;
+    }
+
+    .scb-ads-step {
+        padding: 11px 15px;
+    }
+
+
+    /* ===== 10 Cross-Project Insights ===== */
+
+    .scb-insights-intro {
+        margin-bottom: 30px;
+    }
+
+    .scb-insights-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .scb-insight-card {
+        min-height: auto;
+        padding: 24px;
+        gap: 25px;
+    }
+
+    .scb-insight-content h4 {
+        font-size: 1.8rem;
+    }
+
+
+    /* ===== 11 Reflection ===== */
+
+    .scb-reflection-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .scb-reflection-takeaway {
+        position: static;         /* desktop is sticky */
+        padding: 25px;
+    }
+
+    .scb-reflection-content > p {
+        font-size: 0.94rem;
+        line-height: 1.8;
+    }
+
+    .scb-reflection-takeaway p {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* ---------- Small mobile (500px and below) ---------- */
+@media (max-width: 500px) {
+
+    /* ===== 01 Project Overview ===== */
+
+    .scb-overview-content {
+        gap: 35px;
+    }
+
+    .scb-overview-intro p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .scb-overview-client {
+        padding-top: 30px;
+    }
+
+    .scb-overview-client h3 {
+        font-size: 2.4rem;
+    }
+
+    .scb-overview-client p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+
+    /* ===== 02 Project Challenge ===== */
+
+    .scb-challenge-card {
+        padding: 30px 25px;
+        border-radius: 18px;
+    }
+
+    .scb-challenge-card h3 {
+        margin-bottom: 30px;
+    }
+
+    .scb-challenge-details {
+        gap: 20px;
+        padding-top: 25px;
+    }
+
+    .scb-challenge-details p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+
+    /* ===== 03 Approach ===== */
+
+    .scb-approach-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .scb-approach-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .scb-approach-icon {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 18px;
+    }
+
+    .scb-approach-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .scb-approach-card p {
+        font-size: 0.88rem;
+    }
+
+    .scb-approach-summary {
+        margin-top: 24px;
+        font-size: 1.5rem;
+    }
+
+
+    /* ===== 04 Project Timeline ===== */
+
+    .scb-timeline {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .scb-timeline-step,
+    .scb-timeline-step:first-child {
+        min-height: 90px;
+        padding: 18px 22px;
+        clip-path: none;
+        border-radius: 12px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 18px;
+    }
+
+    .scb-timeline-step:not(:last-child)::after {
+        content: "↓";
+        position: absolute;
+        right: 20px;
+        color: var(--blue-dark);
+        font-size: 1.1rem;
+    }
+
+    .scb-timeline-number {
+        flex-shrink: 0;
+    }
+
+    .scb-timeline-label {
+        max-width: none;
+        padding-right: 25px;
+        font-size: 0.88rem;
+    }
+
+    .scb-section-count {
+        font-size: 0.72rem;
+    }
+
+
+    /* ===== 05 Sales Data Analysis ===== */
+
+    .scb-sales-description p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-sales-metrics {
+        gap: 7px;
+        margin: 18px 0;
+    }
+
+    .scb-sales-metrics li {
+        padding: 8px 11px;
+        font-size: 0.73rem;
+    }
+
+    .scb-sales-gallery {
+        gap: 14px;
+    }
+
+    .scb-sales-figure {
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+
+    /* ===== 06 Email Newsletter ===== */
+
+    .scb-email-description p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-email-version {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .scb-email-version-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 15px;
+    }
+
+    .scb-email-version-header h4 {
+        font-size: 1.8rem;
+    }
+
+    /* Swipe row: one screenshot at a time instead of three tiny ones.
+       Delete this rule and the one below it to go back to three across. */
+    .scb-email-image-grid {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 72%;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px;
+    }
+
+    .scb-email-image {
+        scroll-snap-align: start;
+        border-radius: 5px;
+    }
+
+    .scb-email-principles {
+        justify-content: flex-start;
+        gap: 8px;
+        margin-top: 22px;
+    }
+
+    .scb-email-principle {
+        padding: 8px 12px;
+        font-size: 0.72rem;
+    }
+
+
+    /* ===== 07 In-Person Table Design ===== */
+
+    .scb-table-intro {
+        gap: 15px;
+        margin-bottom: 28px;
+    }
+
+    .scb-table-intro p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-table-layouts {
+        gap: 18px;
+    }
+
+    .scb-table-layout {
+        gap: 24px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .scb-table-layout-image {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .scb-table-layout-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .scb-table-layout-description {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-table-features {
+        gap: 13px;
+    }
+
+    .scb-table-features strong {
+        font-size: 0.84rem;
+    }
+
+    .scb-table-features span {
+        font-size: 0.8rem;
+    }
+
+
+    /* ===== 08 Checkout Process Review ===== */
+
+    .scb-checkout-intro {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .scb-checkout-description p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-checkout-review {
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    .scb-checkout-image {
+        padding: 9px;
+        border-radius: 13px;
+    }
+
+    .scb-checkout-image-caption {
+        font-size: 0.7rem;
+    }
+
+    .scb-checkout-strengths h3,
+    .scb-checkout-improvements-header h3 {
+        font-size: 2.3rem;
+    }
+
+    .scb-checkout-strength-list {
+        gap: 13px;
+    }
+
+    .scb-checkout-strength-list li {
+        font-size: 0.84rem;
+    }
+
+    .scb-checkout-improvements {
+        padding-top: 28px;
+    }
+
+    .scb-checkout-improvements-header {
+        margin-bottom: 22px;
+    }
+
+    .scb-checkout-improvement {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .scb-checkout-improvement p {
+        font-size: 0.82rem;
+    }
+
+
+    /* ===== 09 Google Ads Guide ===== */
+
+    .scb-ads-intro {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .scb-ads-description p,
+    .scb-ads-grant > p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-ads-grant {
+        margin-bottom: 35px;
+        padding: 24px;
+        border-radius: 17px;
+    }
+
+    .scb-ads-grant-top {
+        margin-bottom: 18px;
+    }
+
+    .scb-ads-grant-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .scb-ads-grant-link {
+        font-size: 0.82rem;
+    }
+
+    .scb-ads-steps-header {
+        margin-bottom: 22px;
+    }
+
+    .scb-ads-steps-header h3 {
+        font-size: 2.4rem;
+    }
+
+    .scb-ads-steps-grid {
+        gap: 8px;
+    }
+
+    .scb-ads-step {
+        padding: 10px 13px;
+        gap: 8px;
+    }
+
+    .scb-ads-step h4 {
+        font-size: 0.78rem;
+    }
+
+
+    /* ===== 10 Cross-Project Insights ===== */
+
+    .scb-insights-intro {
+        margin-bottom: 25px;
+    }
+
+    .scb-insights-intro > p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .scb-insights-grid {
+        gap: 10px;
+    }
+
+    .scb-insight-card {
+        padding: 20px;
+        border-radius: 15px;
+        gap: 22px;
+    }
+
+    .scb-insight-content h4 {
+        font-size: 1.65rem;
+    }
+
+    .scb-insight-content p {
+        font-size: 0.84rem;
+        line-height: 1.7;
+    }
+
+
+    /* ===== 11 Reflection ===== */
+
+    .scb-reflection-layout {
+        gap: 12px;
+    }
+
+    .scb-reflection-content > p {
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        line-height: 1.75;
+    }
+
+    .scb-reflection-takeaway {
+        padding: 22px;
+        border-radius: 0 14px 14px 0;
+    }
+
+    .scb-reflection-takeaway-label {
+        margin-bottom: 12px;
+    }
+
+    .scb-reflection-takeaway p {
+        font-size: 1.55rem;
+    }
+}

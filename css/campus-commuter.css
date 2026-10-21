@@ -958,3 +958,310 @@
     margin: 0;
     font-size: 0.95rem;
 }
+
+
+
+
+
+
+/* ==================================================
+   RESPONSIVE — CAMPUS COMMUTER PAGE
+   ================================================== */
+
+/* ---------- Persona carousel arrows (1000px and below) ----------
+   The arrows normally sit outside the card (left/right: -60px), which
+   pushes them off-screen once the window gets narrow. Here they sit
+   side by side underneath the card instead. */
+@media (max-width: 1000px) {
+
+    .persona-carousel {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .persona-track {
+        order: 0;
+    }
+
+    .persona-arrow {
+        position: static;
+        transform: none;
+    }
+
+    .persona-arrow:hover {
+        transform: scale(1.05);
+    }
+
+    .persona-prev {
+        order: 1;
+    }
+
+    .persona-next {
+        order: 2;
+    }
+}
+
+
+/* ---------- Tablet & mobile (768px and below) ---------- */
+@media (max-width: 768px) {
+
+    /* ===== Hero logos (sized in percentages instead of fixed pixels) ===== */
+
+    .campus-hero-visual {
+        min-width: 0;
+    }
+
+    .campus-logo-pair {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        aspect-ratio: 420 / 500;
+        margin: 0 auto;
+    }
+
+    .campus-logo-pair img:first-child {
+        width: 71.4%;
+        height: 60%;
+    }
+
+    .campus-logo-pair img:last-child {
+        width: 71.4%;
+        top: 40%;
+    }
+
+
+    /* ===== 01 Project Overview ===== */
+
+    .campus-overview-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 55px;
+    }
+
+    .campus-overview-content {
+        max-width: 100%;
+    }
+
+    .campus-overview-aside {
+        padding-left: 25px;
+    }
+
+
+    /* ===== 02 Problem & Solution ===== */
+
+    .campus-problem-solution {
+        padding: 20px 0 10px;     /* was 60px on each side, on top of the page padding */
+    }
+
+    .campus-problem-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 45px;
+    }
+
+    .campus-problem-text {
+        gap: 35px;
+    }
+
+
+    /* ===== 03 Research Synthesis ===== */
+
+    .campus-research-section {
+        margin-top: 90px;
+        margin-bottom: 100px;
+    }
+
+    .research-block,
+    .research-block-reverse {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 45px;
+        margin-bottom: 85px;
+    }
+
+    .research-text {
+        max-width: 100%;
+    }
+
+    /* Keep the text above the image when a reversed block stacks */
+    .research-block-reverse .research-image {
+        order: 2;
+    }
+
+    .research-block-reverse .research-text {
+        order: 1;
+    }
+
+    .research-image {
+        width: 100%;
+    }
+
+    .research-image-large {
+        margin-top: 0;
+    }
+
+    .research-image-pair {
+        gap: 15px;
+    }
+
+    .qualitative-analysis {
+        margin-top: 4.5rem;
+    }
+
+    .qualitative-analysis > .research-text {
+        margin-bottom: 2.5rem;
+    }
+
+    .coding-subsection {
+        margin-top: 3rem;
+    }
+
+    .coding-subsection + .coding-subsection {
+        margin-top: 3.5rem;
+    }
+
+
+    /* ===== 04 Understanding the Users ===== */
+
+    .users-intro {
+        margin-bottom: 45px;
+    }
+
+    .persona-card {
+        padding: 24px;
+    }
+
+    .user-flow-section {
+        margin-top: 80px;
+    }
+
+    .user-flow-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .user-flow-layout .case-study-image img {
+        width: 100%;              /* was 80% */
+    }
+
+
+    /* ===== 05 Wireframes ===== */
+
+    .wireframe-stage {
+        margin-top: 55px;
+    }
+
+    .digital-wireframe-stage {
+        margin-top: 80px;
+    }
+
+    .wireframe-stage-header {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+        margin-bottom: 30px;
+    }
+
+    .wireframe-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+
+/* ---------- Small mobile (500px and below) ---------- */
+@media (max-width: 500px) {
+
+    /* ===== 01 Project Overview ===== */
+
+    .campus-overview-layout {
+        gap: 45px;
+    }
+
+    .campus-overview-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .campus-overview-aside {
+        padding-left: 20px;
+    }
+
+
+    /* ===== 02 Problem & Solution ===== */
+
+    .campus-problem-layout {
+        gap: 35px;
+    }
+
+    .campus-problem-block p,
+    .campus-solution-block p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+
+    /* ===== 03 Research Synthesis ===== */
+
+    .research-block,
+    .research-block-reverse {
+        gap: 35px;
+        margin-bottom: 70px;
+    }
+
+    .research-text h3 {
+        font-size: 1.35rem;
+    }
+
+    .research-text p,
+    .research-text li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .research-image-pair {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    /* ===== 04 Understanding the Users ===== */
+
+    .persona-card {
+        padding: 22px;
+    }
+
+    .persona-header {
+        gap: 12px;
+    }
+
+    .persona-photo {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+    }
+
+    .persona-header h3 {
+        font-size: 1.4rem;
+        white-space: normal;      /* was nowrap, which clipped long names */
+    }
+
+    .persona-header span {
+        white-space: normal;
+    }
+
+    .user-flow-section {
+        margin-top: 65px;
+    }
+
+
+    /* ===== 05 Wireframes ===== */
+
+    .wireframe-gallery {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .wireframe-image {
+        height: auto;             /* was a fixed 450px; now each image shows at its own proportions */
+    }
+
+    .wireframe-image img {
+        height: auto;
+    }
+}

@@ -927,3 +927,255 @@
 .reflection-section::after {
     content: none;
 }
+
+
+
+
+
+
+/* ==================================================
+   RESPONSIVE — IEEE PAGE
+   ================================================== */
+
+/* ---------- Touch screens & small screens ----------
+   The screenshot captions normally appear on hover, which phones
+   don't have. Here they sit under each screenshot instead. */
+@media (hover: none), (max-width: 768px) {
+
+    .interface-image:hover {
+        transform: none;
+    }
+
+    .interface-image:hover img {
+        transform: none;
+        filter: none;
+    }
+
+    .interface-image figcaption {
+        position: static;
+        align-items: flex-start;
+        padding: 16px 18px 18px;
+        background: none;
+        color: var(--text);
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    .interface-image figcaption > span {
+        border-color: var(--border);
+        background: none;
+        color: var(--blue-dark);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .interface-image figcaption strong {
+        color: var(--text);
+    }
+
+    .interface-image figcaption small {
+        color: var(--text-light);
+    }
+}
+
+
+/* ---------- Tablet & mobile (768px and below) ---------- */
+@media (max-width: 768px) {
+
+    /* Project Overview */
+    .overview-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 55px;
+    }
+
+    .overview-content {
+        max-width: 700px;
+    }
+
+    .development-strategy {
+        padding-left: 25px;
+    }
+
+    /* AI Model Selection */
+    .model-intro {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .model-card {
+        padding: 24px;
+    }
+
+    .model-card-header {
+        align-items: flex-start;
+    }
+
+    .model-card-content {
+        padding-left: 44px;
+        gap: 30px;
+    }
+
+    /* Application Flow */
+    .application-flow-section {
+        margin-top: 90px;
+    }
+
+    .flow-block {
+        margin-bottom: 75px;
+    }
+
+    .flow-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .flow-description {
+        max-width: 650px;
+    }
+
+    .flow-description p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* Building the Interface */
+    .interface-section {
+        margin-top: 90px;
+    }
+
+    .interface-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .interface-intro p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* AWS Architecture */
+    .aws-section {
+        margin-top: 90px;
+    }
+
+    .architecture-container {
+        width: 100%;              /* was 70%, which made the diagram tiny */
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .architecture-label {
+        font-size: 0.62rem;
+    }
+
+    .aws-description {
+        width: 100%;              /* was 70% */
+        grid-template-columns: 4px minmax(0, 1fr);   /* was 3px, now matches the line */
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    .aws-description p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .architecture-image {
+        overflow-x: auto;
+    }
+
+    .architecture-image img {
+        min-width: 560px;
+    }
+
+    /* Reflection */
+    .reflection-section {
+        margin-top: 90px;
+        margin-bottom: 80px;
+    }
+
+    .reflection-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+        max-width: 100%;
+    }
+
+    .reflection-item {
+        gap: 18px;
+    }
+
+    .reflection-item p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+
+/* ---------- Small mobile (500px and below) ---------- */
+@media (max-width: 500px) {
+
+    /* Project Overview */
+    .overview-layout {
+        gap: 45px;
+    }
+
+    .overview-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .development-strategy {
+        padding-left: 20px;
+    }
+
+    .strategy-list {
+        gap: 13px;
+    }
+
+    .strategy-item {
+        font-size: 0.92rem;
+    }
+
+    /* AI Model Selection */
+    .model-card {
+        padding: 22px;
+    }
+
+    .model-card-header {
+        gap: 12px;
+    }
+
+    .model-name {
+        align-items: flex-start;
+    }
+
+    .model-name h3 {
+        font-size: 1rem;
+    }
+
+    .model-badge {
+        display: none;
+    }
+
+    .model-card-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding-left: 42px;
+    }
+
+    .model-column p {
+        font-size: 0.88rem;
+    }
+
+    /* AWS Architecture */
+    .architecture-container {
+        padding: 12px;
+    }
+
+    .architecture-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
